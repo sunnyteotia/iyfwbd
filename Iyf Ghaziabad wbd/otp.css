@@ -1,0 +1,25 @@
+body{
+    text-align: center;
+    color: blue;
+    background-color: azure;
+}
+input{
+    background-color: blanchedalmond;
+    color: red;
+    margin: 5px;
+}
+button{
+    margin: 5px;
+    border: 2px solid black;
+    color: black;
+    background-color:antiquewhite;
+    border-radius: 5px;
+}
+button:hover{
+    background-color: black;
+    color: blue;
+    font-size: large;
+}
+h1{
+    background-color: black;
+}
