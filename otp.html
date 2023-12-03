@@ -10,14 +10,31 @@
 <h1>Register for Otp Classes</h1>
 <body>
     <br>
-    <form action="Otp Registration">
+    <form>
    Name: <input type="text" name="Name" id="Name" placeholder="Enter the name"><br>
     Email: <input type="text" name="Email" id="Email" placeholder="Enter the email"><br>
     Contact :<input type="text" name="Phone Number" id="phn" placeholder="Enter the Contact Number"><br>
     Occupation:<input type="text" name="occupation" id="occupation" placeholder="Enter the Occupation"><br>
     Address:<input type="text" name="address" id="address" placeholder="Enter Location of residence"><br>
     Remarks:<input type="text" name="remarks" id="remarks" placeholder="Remarks"><br>
-    <button>Submit</button>
+        <input type="submit"   class="sub"onclick="saved()"><br><br>
+<!--     <button>Submit</button> -->
 </form>
+    <script>
+    function saved(){
+      window.alert("Your registration is Completed");
+    }
+    let form=document.querySelector("form");
+    form.addEventListener('submit',(e)=>{
+        e.preventDefault();
+        let data=new FormData(form);
+        fetch('https://script.google.com/macros/s/AKfycbwGz27hWQ6IQtM192YdiCgKMFHywWbfzAeopTjJ0nzzSTiT9sJceNqLBhwGu05Xh2URWg/exec',{
+            method:"POST",
+            body:data
+        })
+        .then(res=>res.text())
+        .then(data=>console.log(data));
+    })
+</script>
 </body>
 </html>
