@@ -8,14 +8,14 @@ input{
     color: red;
     margin: 5px;
 }
-button{
+.sub{
     margin: 5px;
     border: 2px solid black;
     color: black;
     background-color:antiquewhite;
     border-radius: 5px;
 }
-button:hover{
+.sub:hover{
     background-color: black;
     color: blue;
     font-size: large;
