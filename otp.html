@@ -13,16 +13,16 @@
     <form>
    Name: <input type="text" name="Name" id="Name" placeholder="Enter the name"><br>
     Email: <input type="text" name="Email" id="Email" placeholder="Enter the email"><br>
-    Contact :<input type="tel" name="Phone" id="phn" placeholder="Enter the Contact Number"><br>
+    Contact :<input type="text" name="Phone" id="phn" placeholder="Enter the Contact Number"><br>
     Occupation:<input type="text" name="occupation" id="occupation" placeholder="Enter the Occupation"><br>
     Address:<input type="text" name="address" id="address" placeholder="Enter Location of residence"><br>
     Remarks:<input type="text" name="remarks" id="remarks" placeholder="Remarks"><br>
-            <input type="submit"   class="sub"onclick="saved()"><br><br>
+            <input type="submit"   class="sub"  onclick="saved()" ><br><br>
 <!--     <button>Submit</button> -->
 </form>
     <script>
     function saved(){
-      window.alert("Your registration is Completed");
+      alert("Your registration is Completed");
     }
     let form=document.querySelector("form");
     form.addEventListener('submit',(e)=>{
@@ -34,7 +34,7 @@
         })
         .then(res=>res.text())
         .then(data=>console.log(data));
-    })
+         })
 </script>
 </body>
 </html>
